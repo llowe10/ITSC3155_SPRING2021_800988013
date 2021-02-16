@@ -21,9 +21,12 @@ def count_char(s, char):
 # otherwise return False
 
 def is_power_of(i,j):
+    if(i == j):
+        return True
     it = 0
-    for it in range(it,j):
-        if (i**it == j) or (i == j):
+    k = abs(j)
+    for it in range(it,k):
+        if (i**it == j):
             return True
         it = it+1
     return False
