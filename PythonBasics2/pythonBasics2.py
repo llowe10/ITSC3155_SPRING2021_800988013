@@ -11,9 +11,13 @@
 # to n (including n).
 
 def count_threes(n):
-  # YOUR CODE HERE
-
-  return
+  count = 0
+  if n > 0 and n < 3:
+    return 0
+  for i in range(0,n):
+    if i % 3 == 0 and n != 0:
+      count = count + 1
+  return count
 
 
 # Part B. longest_consecutive_repeating_char
@@ -32,6 +36,13 @@ def longest_consecutive_repeating_char(s):
 # forwards. Treat capital letters the same as lowercase ones
 # and ignore spaces (i.e. case insensitive).
 def is_palindrome(s):
-  # YOUR CODE HERE
-
-  return
+  s = s.replace(" ","")
+  s = s.upper()
+  i = 0
+  matches = 0
+  for i in range(0, len(s)//2):
+    if s[i] == s[len(s)-1-i]:
+      matches = matches + 1
+  if matches == len(s)//2:
+    return True
+  return False
