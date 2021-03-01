@@ -17,6 +17,12 @@ class TestPythonBasicsOne(unittest.TestCase):
 
         # Please add three more test cases following the order above
 
+        self.assertEqual(pythonBasics3.ends_with_consonant("Welcome to software engineering"), True)
+
+        self.assertEqual(pythonBasics3.ends_with_consonant("I plan on graduating this year"), True)
+
+        self.assertEqual(pythonBasics3.ends_with_consonant("Oh happy day"), True)
+
 #Test case for ends_with_number
     def test_ends_with_number(self):
 
@@ -29,6 +35,12 @@ class TestPythonBasicsOne(unittest.TestCase):
         self.assertEqual(pythonBasics3.ends_with_number("Blue plus purple equals 5"), True)
 
         # Please add three more test cases following the order above
+
+        self.assertEqual(pythonBasics3.ends_with_number("11 plus 7 equals 18"), True)
+
+        self.assertEqual(pythonBasics3.ends_with_number("It's a beautiful day outside"), False)
+
+        self.assertEqual(pythonBasics3.ends_with_number("I am a computer science major."), False)
 
 
 #Test case for binary_multiple_of_6
