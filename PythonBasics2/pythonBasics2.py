@@ -20,10 +20,14 @@ def count_threes(n):
       count = count + 1
   """
   multiple = "0"
-  max = 0
-  dict = {"0":0, "3":0, "6":0, "9":0}
+  max = 0 # initialize value for multiple with highest number of appearances
+  dict = {"0":0, "3":0, "6":0, "9":0} # initialize dictionary with known multiples of 3
+
+  # loop through string and count number of appearances per multiple
   for i in range(0, len(n)):
     dict[n[i]] = dict[n[i]] + 1
+
+  # loop through keys and identify which appears the most times
   for key in dict:
     if dict[key] > max:
       max = dict[key]
@@ -50,16 +54,24 @@ def longest_consecutive_repeating_char(s):
   return s[maxIndex]
   """
   max = 0
-  list = []
-  counts = {}
+  list = [] # initialize list that will be returned
+  counts = {} # initialize counts dictionary for each character
+
+  # add each character to dictionary
   for char in s:
       counts[char] = 0
+
+  # count the number of consecutive characters and update dictionary
   for i in range(0,len(s)-1):
     if s[i] == s[i+1]:
       counts[s[i]] = counts[s[i]] + 1
+
+  # identify the highest number of consecutive characters and assign to max
   for value in counts.values():
     if value > max:
       max = value
+
+  # if the count for a character matches the max, add it to the final list
   for key in counts:
     if counts[key] == max:
       list.append(key)
